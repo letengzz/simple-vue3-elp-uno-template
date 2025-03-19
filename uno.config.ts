@@ -4,7 +4,7 @@
 import presetRemToPx from '@unocss/preset-rem-to-px'
 // transformerDirectives 可以使用 @apply @screen theme函数
 import transformerDirective from '@unocss/transformer-directives'
-import { defineConfig, presetAttributify, presetIcons, presetTypography, presetUno, presetWebFonts, presetWind3 , transformerVariantGroup } from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetTypography, presetUno, presetWebFonts, presetWind3, transformerVariantGroup } from 'unocss'
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 export default defineConfig({
   presets: [
@@ -16,25 +16,25 @@ export default defineConfig({
       baseFontSize: 4,
     }),
     // 自动引入图标配置
-    presetIcons({
-      collections: {
-        //把自己的svg文件转换为class，这里的my-icon名称随便取，使用的时候通过i-my-icon-[filename]。
-          'my-icon': FileSystemIconLoader(
-             './src/assets/svg',
-              svg => svg.replace(/#FFF/, 'currentColor'),
-          ),
-      },
-      scale: 1.2,
-      warn: true,
-    }),
-    presetTypography(),
-        presetWebFonts({
-            fonts: {
-                sans: 'DM Sans',
-                serif: 'DM Serif Display',
-                mono: 'DM Mono',
-            },
-    }),
+    // presetIcons({
+    //   collections: {
+    //     //把自己的svg文件转换为class，这里的my-icon名称随便取，使用的时候通过i-my-icon-[filename]。
+    //       'my-icon': FileSystemIconLoader(
+    //          './src/assets/svg',
+    //           svg => svg.replace(/#FFF/, 'currentColor'),
+    //       ),
+    //   },
+    //   scale: 1.2,
+    //   warn: true,
+    // }),
+    // presetTypography(),
+    //     presetWebFonts({
+    //         fonts: {
+    //             sans: 'DM Sans',
+    //             serif: 'DM Serif Display',
+    //             mono: 'DM Mono',
+    //         },
+    // }),
   ],
   transformers: [
     transformerDirective(),
