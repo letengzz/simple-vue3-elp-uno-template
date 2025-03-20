@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
+import en from "element-plus/es/locale/lang/en.mjs";
+import zhCn from "element-plus/es/locale/lang/zh-cn.mjs";
+
+const language = ref("zh-cn");
+const locale = computed(() => (language.value === "zh-cn" ? zhCn : en));
 </script>
 
 <template>
@@ -17,7 +22,9 @@ import HelloWorld from "./components/HelloWorld.vue";
     </div>
   </header>
 
-  <RouterView />
+  <el-config-provider :locale="locale">
+    <RouterView />
+  </el-config-provider>
 </template>
 
 <style scoped>
