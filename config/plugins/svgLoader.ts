@@ -1,9 +1,9 @@
 // svg
-import svgLoader from 'vite-svg-loader'
+import svgLoader from "vite-svg-loader";
 
 export function svgLoaderPlugin() {
   return svgLoader({
-    defaultImport: 'url', // or 'raw'
+    defaultImport: "url", // or 'raw'
     svgo: true,
-  })
+  });
 }

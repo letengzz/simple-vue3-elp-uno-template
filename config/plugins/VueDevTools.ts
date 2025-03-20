@@ -1,4 +1,4 @@
 // devTools
-import VueDevTools from 'vite-plugin-vue-devtools'
+import VueDevTools from "vite-plugin-vue-devtools";
 
-export const VueDevToolsPlugin: any = () => VueDevTools()
+export const VueDevToolsPlugin: any = () => VueDevTools();

@@ -10,12 +10,12 @@ export function useServer(viteEnv: ViteEnv) {
     port: viteEnv.VITE_PORT,
     proxy: {
       // 前缀
-      '/dev': {
-        target: 'http://www.example.com',
+      "/dev": {
+        target: "http://www.example.com",
         changeOrigin: true,
         // 前缀重写
-        rewrite: (path: string) => path.replace(/^\/dev/, '/dev'),
+        rewrite: (path: string) => path.replace(/^\/dev/, "/dev"),
       },
     },
-  }
+  };
 }

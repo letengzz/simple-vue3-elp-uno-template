@@ -1,5 +1,5 @@
 // 图片压缩
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export function ViteImageOptimizerPlugin() {
   return ViteImageOptimizer({
@@ -15,5 +15,5 @@ export function ViteImageOptimizerPlugin() {
       // https://sharp.pixelplumbing.com/api-output#jpeg
       quality: 60,
     },
-  })
+  });
 }

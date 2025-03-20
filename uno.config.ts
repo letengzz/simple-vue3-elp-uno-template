@@ -1,15 +1,15 @@
 // uno.config.ts
 
 // 预设rem转px
-import presetRemToPx from '@unocss/preset-rem-to-px'
+import presetRemToPx from "@unocss/preset-rem-to-px";
 // transformerDirectives 可以使用 @apply @screen theme函数
-import transformerDirective from '@unocss/transformer-directives'
-import { defineConfig, presetAttributify, presetIcons, presetTypography, presetUno, presetWebFonts, presetWind3, transformerVariantGroup } from 'unocss'
-import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
+import transformerDirective from "@unocss/transformer-directives";
+import { defineConfig, presetAttributify, presetWind3, transformerVariantGroup } from "unocss";
+// import { defineConfig, presetAttributify, presetIcons, presetTypography, presetUno, presetWebFonts, presetWind3, transformerVariantGroup } from "unocss";
+// import { FileSystemIconLoader } from "@iconify/utils/lib/loader/node-loaders";
 export default defineConfig({
   presets: [
     presetAttributify(),
-    presetUno(),
     presetWind3(),
     // 现在mt-1会转换为 margin-top: 1px
     presetRemToPx({
@@ -50,15 +50,15 @@ export default defineConfig({
   // 自定义属性 一个属性可以对应多个unocss类值
   shortcuts: {
     // 垂直水平居中
-    'flex-center': 'flex justify-center items-center',
+    "flex-center": "flex justify-center items-center",
     // 放在最后
-    'flex-col-end': 'flex justify-end items-center',
+    "flex-col-end": "flex justify-end items-center",
     // 垂直居中
-    'flex-middle': 'flex items-center',
+    "flex-middle": "flex items-center",
     // 分开两边
-    'flex-between': 'flex justify-between items-center',
+    "flex-between": "flex justify-between items-center",
     // 竖直居中
-    'flex-col-center': 'flex flex-col justify-center',
+    "flex-col-center": "flex flex-col justify-center",
   },
-  safelist: 'prose m-auto text-left'.split(' '),
-})
+  safelist: "prose m-auto text-left".split(" "),
+});

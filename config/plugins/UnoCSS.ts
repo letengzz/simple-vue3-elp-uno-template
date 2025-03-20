@@ -1,5 +1,5 @@
 // unocss
 
-import UnoCSS from 'unocss/vite'
+import UnoCSS from "unocss/vite";
 
-export const UnoCSSPlugin: any = () => UnoCSS()
+export const UnoCSSPlugin: any = () => UnoCSS();

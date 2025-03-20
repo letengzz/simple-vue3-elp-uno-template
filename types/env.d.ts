@@ -1,9 +1,9 @@
 /// <reference types="vite/client" />
-declare module '*.vue' {
-  import type { ComponentOptions } from 'vue'
+declare module "*.vue" {
+  import type { ComponentOptions } from "vue";
 
-  const componentOptions: ComponentOptions
-  export default componentOptions
+  const componentOptions: ComponentOptions;
+  export default componentOptions;
 }
 
 interface ImportMetaEnv {
@@ -23,4 +23,4 @@ interface ImportMeta {
   readonly env: ImportMetaEnv
 }
 
-interface ViteEnv extends ImportMetaEnv {}
+type ViteEnv = ImportMetaEnv
